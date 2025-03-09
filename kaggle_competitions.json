@@ -1,0 +1,142 @@
+[
+    {
+        "title": "AI Mathematical Olympiad - Progress Prize 2",
+        "category": "Featured",
+        "prize": "2,117,152 Usd",
+        "deadline": "2025-04-01 23:59:00",
+        "link": "https://www.kaggle.com/c/https://www.kaggle.com/competitions/ai-mathematical-olympiad-progress-prize-2"
+    },
+    {
+        "title": "Konwinski Prize",
+        "category": "Featured",
+        "prize": "1,225,000 Usd",
+        "deadline": "2025-03-12 23:59:00",
+        "link": "https://www.kaggle.com/c/https://www.kaggle.com/competitions/konwinski-prize"
+    },
+    {
+        "title": "Stanford RNA 3D Folding",
+        "category": "Featured",
+        "prize": "75,000 Usd",
+        "deadline": "2025-05-29 23:59:00",
+        "link": "https://www.kaggle.com/c/https://www.kaggle.com/competitions/stanford-rna-3d-folding"
+    },
+    {
+        "title": "BYU - Locating Bacterial Flagellar Motors 2025",
+        "category": "Research",
+        "prize": "65,000 Usd",
+        "deadline": "2025-06-04 23:59:00",
+        "link": "https://www.kaggle.com/c/https://www.kaggle.com/competitions/byu-locating-bacterial-flagellar-motors-2025"
+    },
+    {
+        "title": "NeurIPS 2024 - Lux AI Season 3",
+        "category": "Featured",
+        "prize": "50,000 Usd",
+        "deadline": "2025-03-10 23:59:00",
+        "link": "https://www.kaggle.com/c/https://www.kaggle.com/competitions/lux-ai-season-3"
+    },
+    {
+        "title": "March Machine Learning Mania 2025",
+        "category": "Featured",
+        "prize": "50,000 Usd",
+        "deadline": "2025-03-20 16:00:00",
+        "link": "https://www.kaggle.com/c/https://www.kaggle.com/competitions/march-machine-learning-mania-2025"
+    },
+    {
+        "title": "Drawing with LLMs",
+        "category": "Featured",
+        "prize": "50,000 Usd",
+        "deadline": "2025-05-27 23:59:00",
+        "link": "https://www.kaggle.com/c/https://www.kaggle.com/competitions/drawing-with-llms"
+    },
+    {
+        "title": "Binary Prediction with a Rainfall Dataset",
+        "category": "Playground",
+        "prize": "Swag",
+        "deadline": "2025-03-31 23:59:00",
+        "link": "https://www.kaggle.com/c/https://www.kaggle.com/competitions/playground-series-s5e3"
+    },
+    {
+        "title": "Titanic - Machine Learning from Disaster",
+        "category": "Getting Started",
+        "prize": "Knowledge",
+        "deadline": "2030-01-01 00:00:00",
+        "link": "https://www.kaggle.com/c/https://www.kaggle.com/competitions/titanic"
+    },
+    {
+        "title": "Housing Prices Competition for Kaggle Learn Users",
+        "category": "Getting Started",
+        "prize": "Knowledge",
+        "deadline": "2030-01-01 23:59:00",
+        "link": "https://www.kaggle.com/c/https://www.kaggle.com/competitions/home-data-for-ml-course"
+    },
+    {
+        "title": "House Prices - Advanced Regression Techniques",
+        "category": "Getting Started",
+        "prize": "Knowledge",
+        "deadline": "2030-01-01 00:00:00",
+        "link": "https://www.kaggle.com/c/https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques"
+    },
+    {
+        "title": "Spaceship Titanic",
+        "category": "Getting Started",
+        "prize": "Knowledge",
+        "deadline": "2030-01-01 00:00:00",
+        "link": "https://www.kaggle.com/c/https://www.kaggle.com/competitions/spaceship-titanic"
+    },
+    {
+        "title": "Digit Recognizer",
+        "category": "Getting Started",
+        "prize": "Knowledge",
+        "deadline": "2030-01-01 00:00:00",
+        "link": "https://www.kaggle.com/c/https://www.kaggle.com/competitions/digit-recognizer"
+    },
+    {
+        "title": "Natural Language Processing with Disaster Tweets",
+        "category": "Getting Started",
+        "prize": "Knowledge",
+        "deadline": "2030-01-01 00:00:00",
+        "link": "https://www.kaggle.com/c/https://www.kaggle.com/competitions/nlp-getting-started"
+    },
+    {
+        "title": "Store Sales - Time Series Forecasting",
+        "category": "Getting Started",
+        "prize": "Knowledge",
+        "deadline": "2030-06-30 23:59:00",
+        "link": "https://www.kaggle.com/c/https://www.kaggle.com/competitions/store-sales-time-series-forecasting"
+    },
+    {
+        "title": "Connect X",
+        "category": "Getting Started",
+        "prize": "Knowledge",
+        "deadline": "2030-01-01 00:00:00",
+        "link": "https://www.kaggle.com/c/https://www.kaggle.com/competitions/connectx"
+    },
+    {
+        "title": "I\u2019m Something of a Painter Myself",
+        "category": "Getting Started",
+        "prize": "Knowledge",
+        "deadline": "2030-07-01 23:59:00",
+        "link": "https://www.kaggle.com/c/https://www.kaggle.com/competitions/gan-getting-started"
+    },
+    {
+        "title": "LLM Classification Finetuning",
+        "category": "Getting Started",
+        "prize": "Knowledge",
+        "deadline": "2030-07-01 23:59:00",
+        "link": "https://www.kaggle.com/c/https://www.kaggle.com/competitions/llm-classification-finetuning"
+    },
+    {
+        "title": "Contradictory, My Dear Watson",
+        "category": "Getting Started",
+        "prize": "Knowledge",
+        "deadline": "2030-07-01 23:59:00",
+        "link": "https://www.kaggle.com/c/https://www.kaggle.com/competitions/contradictory-my-dear-watson"
+    },
+    {
+        "title": "Petals to the Metal - Flower Classification on TPU",
+        "category": "Getting Started",
+        "prize": "Knowledge",
+        "deadline": "2030-06-03 23:59:00",
+        "link": "https://www.kaggle.com/c/https://www.kaggle.com/competitions/tpu-getting-started"
+    }
+]
