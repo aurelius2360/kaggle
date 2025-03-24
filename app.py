@@ -1,28 +1,59 @@
 import streamlit as st
 import json
-from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import HuggingFaceEmbeddings
+import chromadb
+from chromadb.utils import embedding_functions
+import ollama
 
+# Load JSON data from file
+with open("kaggle_competitions.json", "r") as file:
+    competition_data = json.load(file)
 
-# Load FAISS index
-embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-vectorstore = FAISS.load_local("kaggle_faiss", embedding_model, allow_dangerous_deserialization=True)
+# Ensure the data is a list and extract first competition if needed
+if isinstance(competition_data, list):
+    competitions = competition_data  # Store all competitions if multiple exist
+else:
+    competitions = [competition_data]  # Convert single object to list
+
+# Initialize ChromaDB client
+client = chromadb.PersistentClient(path="competition_db")
+collection = client.get_or_create_collection("competitions")
+
+# Get existing IDs to prevent duplicates
+existing_ids = set(collection.get()['ids']) if collection.count() > 0 else set()
+
+# Add data to ChromaDB only if it's not already present
+for idx, comp in enumerate(competitions):
+    comp_id = f"comp_{idx}"
+    if comp_id not in existing_ids:
+        comp_text = f"Title: {comp['title']}, Category: {comp['category']}, Prize: {comp['prize']}, Deadline: {comp['deadline']}, Link: {comp['link']}"
+        collection.add(documents=[comp_text], ids=[comp_id])
+
+def retrieve_info(query):
+    results = collection.query(query_texts=[query], n_results=1)
+    if results["documents"]:
+        return results["documents"][0][0]
+    return "No relevant information found."
+
+def generate_response(query, chat_history):
+    context = retrieve_info(query)
+    prompt = f"You are an AI assistant. Use the following competition details to answer user queries.\n\nCompetition Details: {context}\n\nUser Query: {query}\n\nAnswer:"
+    response = ollama.chat(model="gemma3:1b", messages=[{"role": "user", "content": prompt}])
+    return response["message"]["content"]
 
 # Streamlit UI
-st.title("🤖 Kaggle Competition Finder")
-st.write("Ask me about Kaggle competitions!")
+st.title("Kaggle Competition Chatbot")
+chat_history = st.session_state.get("chat_history", [])
 
-query = st.text_input("Enter your query (e.g., 'Ongoing Data Science competitions with prize money')")
-if st.button("Search"):
-    results = vectorstore.similarity_search(query, k=5)
-    
-    if results:
-        for result in results:
-            comp = json.loads(result.page_content)
-            st.write(f"### {comp['title']}")
-            st.write(f"📅 **Deadline**: {comp['deadline']}")
-            st.write(f"🏆 **Prize**: {comp['prize']}")
-            st.write(f"🔗 [View Competition]({comp['link']})")
-            st.write("---")
-    else:
-        st.write("❌ No relevant competitions found. Try another query!")
+user_input = st.text_input("Ask about the competition:")
+if user_input:
+    response = generate_response(user_input, chat_history)
+    chat_history.append(f"User: {user_input}")
+    chat_history.append(f"Bot: {response}")
+    st.session_state["chat_history"] = chat_history
+
+    st.write("Response:", response)
+
+# Display chat history
+st.subheader("Chat History")
+for chat in chat_history:
+    st.write(chat)
